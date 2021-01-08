@@ -36,7 +36,7 @@ Vue.createApp({
             this.isStepsFinished = false;
         },
         nextOfFinish() {
-            if (this.activeIndex < this.steps.length - 1) {
+            if (!this.isLastStep) {
                 this.activeIndex++;
             } else {
                 this.isStepsFinished = true;
